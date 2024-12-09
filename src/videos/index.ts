@@ -1,27 +1,18 @@
-import {Request, Response, Router} from 'express'
-import {getVideosController} from './getVideosController'
-import {createVideoController} from './createVideoController'
-import {db} from "../db/db";
-// import {findVideoController} from './findVideoController'
-// import {deleteVideoController} from './deleteVideoController'
+import { Router } from 'express';
+import { getVideos } from './getVideos';
+import { createVideos } from './createVideos';
+import { findVideo } from './findVideo';
 
-export const videosRouter = Router()
+export const videosRouter = Router();
 
-const videoController = {
-    getVideosController: (req: Request, res: Response<any /*OutputVideoType[]*/>) => {
-        const videos = db.videos // получаем видео из базы данных
+const videosController = {
+    getVideos,
+    createVideos,
+    findVideo,
+};
 
-        res
-            .status(200)
-            .json(videos) // отдаём видео в качестве ответа
-    },
-    createVideoController: createVideoController,
-}
-
-videosRouter.get('/', videoController.getVideosController)
-videosRouter.post('/', videoController.createVideoController)
-// videosRouter.get('/:id', findVideoController)
-// videosRouter.delete('/:id', deleteVideoController)
+videosRouter.get('/', videosController.getVideos);
+videosRouter.post('/', videosController.createVideos);
+videosRouter.get('/:id', videosController.findVideo);
+// videosRouter.delete('/:id', deleteVideos)
 // ...
-
-// не забудьте добавить роут в апп

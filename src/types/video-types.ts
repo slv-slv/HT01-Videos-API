@@ -9,11 +9,6 @@ export enum Resolutions {
   P2160 = 'P2160',
 }
 
-export type ResolutionsString = keyof typeof Resolutions
-// const x = Resolutions.P144
-// const y = Resolutions[x]
-// const z = Resolutions['P144']
-
 export type OutputVideoType = {
   id: number
   title: string

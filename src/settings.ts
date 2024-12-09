@@ -8,5 +8,3 @@ export const SETTINGS = {
         VIDEOS: '/videos',
     },
 }
-
-// const x = SETTINGS.PATH.VIDEO
