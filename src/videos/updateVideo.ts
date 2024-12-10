@@ -11,7 +11,7 @@ import
     publicationDateValidation,
   } from './inputValidation';
 
-export const getInputErrors = (video: UpdateVideoType) => {
+export const getInputErrors = (video: UpdateVideoType): OutputErrorsArrayType => {
   const { title, author, availableResolutions, canBeDownloaded, minAgeRestriction, publicationDate } = video;
   
   const errors: OutputErrorsArrayType = {

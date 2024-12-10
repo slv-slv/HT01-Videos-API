@@ -4,7 +4,7 @@ import { OutputErrorsArrayType } from '../types/error-types';
 import { InputVideoType } from '../types/video-types';
 import { titleValidation, authorValidation, availableResolutionsValidation } from './inputValidation';
 
-export const getInputErrors = (video: InputVideoType) => {
+export const getInputErrors = (video: InputVideoType): OutputErrorsArrayType => {
     const { title, author, availableResolutions } = video;
     
     const errors: OutputErrorsArrayType = {
