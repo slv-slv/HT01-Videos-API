@@ -1,5 +1,5 @@
 import { OutputErrorType } from "../types/error-types";
-import { InputVideoType, Resolutions } from "../types/video-types";
+import { Resolutions } from "../types/video-types";
 
 export const titleValidation = (title: string): OutputErrorType | undefined => {
   if (!title) {

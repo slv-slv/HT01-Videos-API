@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import {SETTINGS} from './settings';
-import {videosRouter} from './videos';
+import { SETTINGS } from './settings';
+import { videosRouter } from './videos';
 import { db } from './db/db';
 
 export const app = express();
