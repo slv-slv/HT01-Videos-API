@@ -7,21 +7,30 @@ export enum Resolutions {
   P1080 = 'P1080',
   P1440 = 'P1440',
   P2160 = 'P2160',
-}
-
-export type OutputVideoType = {
-  id: number
-  title: string
-  author: string
-  canBeDownloaded: boolean
-  minAgeRestriction: null
-  createdAt: string
-  publicationDate: string
-  availableResolution: Resolutions[]
-}
+};
 
 export type InputVideoType = {
-  title: string
-  author: string
-  availableResolution: Resolutions[]
-}
+  title: string,
+  author: string,
+  availableResolutions: Resolutions[],
+};
+
+export type UpdateVideoType = {
+  title: string,
+  author: string,
+  availableResolutions: Resolutions[],
+  canBeDownloaded: boolean,
+  minAgeRestriction: null,
+  publicationDate: string,
+};
+
+export type OutputVideoType = {
+  id: number,
+  title: string,
+  author: string,
+  canBeDownloaded: boolean,
+  minAgeRestriction: null,
+  createdAt: string,
+  publicationDate: string,
+  availableResolutions: Resolutions[],
+};
