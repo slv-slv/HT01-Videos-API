@@ -1,5 +1,5 @@
-export type OutputErrorType = { message: string, field: string };
+export type OutputErrorType = { message: string; field: string };
 
 export type OutputErrorsArrayType = {
-  errorsMessages: OutputErrorType[]
+  errorsMessages: OutputErrorType[];
 };

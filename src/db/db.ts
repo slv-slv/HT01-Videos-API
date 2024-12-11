@@ -1,7 +1,7 @@
 // import {VideoDBType} from './video-db-type'
 
 export type DBType = {
-  videos: any[]
+  videos: any[];
 };
 
 export const db: DBType = {
@@ -42,8 +42,8 @@ export const db: DBType = {
 // функция для быстрой очистки/заполнения базы данных для тестов
 export const setDB = (dataset?: Partial<DBType>) => {
   if (!dataset) {
-      db.videos = [];
-      return;
+    db.videos = [];
+    return;
   }
 
   db.videos = dataset.videos || db.videos;

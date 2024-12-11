@@ -9,12 +9,12 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.status(200).json({version: '1.0'});
+  res.status(200).json({ version: '1.0' });
 });
 
 app.use(SETTINGS.PATH.VIDEOS, videosRouter);
 
 app.delete('/testing/all-data', (req, res) => {
-    db.videos = [];
-    res.status(204).end();
+  db.videos = [];
+  res.status(204).end();
 });
