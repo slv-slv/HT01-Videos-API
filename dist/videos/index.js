@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.videosRouter = void 0;
+const express_1 = require("express");
+const getVideos_1 = require("./getVideos");
+const findVideo_1 = require("./findVideo");
+const createVideo_1 = require("./createVideo");
+const updateVideo_1 = require("./updateVideo");
+const deleteVideo_1 = require("./deleteVideo");
+exports.videosRouter = (0, express_1.Router)();
+exports.videosRouter.get('/', getVideos_1.getVideos);
+exports.videosRouter.get('/:id', findVideo_1.findVideo);
+exports.videosRouter.post('/', createVideo_1.createVideo);
+exports.videosRouter.put('/:id', updateVideo_1.updateVideo);
+exports.videosRouter.delete('/:id', deleteVideo_1.deleteVideo);
