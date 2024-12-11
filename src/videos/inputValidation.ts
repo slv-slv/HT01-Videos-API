@@ -100,7 +100,8 @@ export const minAgeRestrictionValidation = (minAgeRestriction: number | null): O
 };
 
 export const publicationDateValidation = (publicationDate: string): OutputErrorType | undefined => {
-  if (new Date(publicationDate).toString() === 'Invalid Date') {
+  const parsedDate = new Date(publicationDate);
+  if (isNaN(parsedDate.getTime()) || publicationDate !== parsedDate.toISOString()) {
     return {
       message: 'Incorrect publication date format',
       field: 'publicationDate',
