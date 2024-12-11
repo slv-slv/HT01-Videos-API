@@ -1,5 +1,20 @@
-import { OutputErrorType } from "../types/error-types";
-import { Resolutions } from "../types/video-types";
+import { OutputErrorsArrayType, OutputErrorType } from '../types/error-types';
+import { Resolutions } from '../types/video-types';
+
+export const getInputErrors = (validationFunctions: Function[]): OutputErrorsArrayType => {
+  const errors: OutputErrorsArrayType = {
+    errorsMessages: [],
+  };
+
+  validationFunctions.forEach((func) => {
+    const error = func();
+    if (error) {
+      errors.errorsMessages.push(error);
+    }
+  });
+
+  return errors;
+};
 
 export const titleValidation = (title: string): OutputErrorType | undefined => {
   if (!title) {
@@ -12,7 +27,7 @@ export const titleValidation = (title: string): OutputErrorType | undefined => {
   if (typeof title !== 'string') {
     return {
       message: 'The title must be a string',
-      field: 'title', 
+      field: 'title',
     };
   }
 
@@ -35,7 +50,7 @@ export const authorValidation = (author: string): OutputErrorType | undefined =>
   if (typeof author !== 'string') {
     return {
       message: 'The author name must be a string',
-      field: 'author', 
+      field: 'author',
     };
   }
 
