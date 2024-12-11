@@ -35,7 +35,7 @@ export const createVideo = (req: Request, res: Response) => {
     }
     
     const defaultValues = {
-        id: Math.max(...db.videos.map((video) => video.id)) + 1,
+        id: db.videos.length ? Math.max(...db.videos.map((video) => video.id)) + 1 : 1,
         canBeDownloaded: false,
         minAgeRestriction: null,
         createdAt: new Date().toISOString(),
