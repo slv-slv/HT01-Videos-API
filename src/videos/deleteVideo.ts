@@ -5,7 +5,7 @@ export const deleteVideo = (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
   const dbIndex = db.videos.findIndex((video) => video.id === id);
   if (dbIndex === -1) {
-      res.status(404).json({ message: 'Video not found' });
+      res.status(404).end();
   }
 
   db.videos.splice(dbIndex, 1);
