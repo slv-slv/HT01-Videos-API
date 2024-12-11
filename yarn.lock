@@ -1054,27 +1054,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"HT01-Videos-API@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "HT01-Videos-API@workspace:."
-  dependencies:
-    "@types/cors": "npm:^2.8.17"
-    "@types/express": "npm:^5.0.0"
-    "@types/jest": "npm:^29.5.14"
-    "@types/node": "npm:^22.10.1"
-    "@types/supertest": "npm:^6.0.2"
-    cors: "npm:^2.8.5"
-    dotenv: "npm:^16.4.7"
-    express: "npm:^4.21.2"
-    jest: "npm:^29.7.0"
-    nodemon: "npm:^3.1.7"
-    supertest: "npm:^7.0.0"
-    ts-jest: "npm:^29.2.5"
-    ts-node: "npm:^10.9.2"
-    typescript: "npm:^5.7.2"
-  languageName: unknown
-  linkType: soft
-
 "abbrev@npm:^2.0.0":
   version: 2.0.0
   resolution: "abbrev@npm:2.0.0"
@@ -4544,6 +4523,27 @@ __metadata:
   checksum: 10c0/f15d588d79f3675135ba783c91a4083dcd290a2a5be9fcb6514220a1634e23df116847b1cc51f66bfb0644cf9353b2abb7815ae499bab06e46dd33c1a6bf1f4f
   languageName: node
   linkType: hard
+
+"videos-api@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "videos-api@workspace:."
+  dependencies:
+    "@types/cors": "npm:^2.8.17"
+    "@types/express": "npm:^5.0.0"
+    "@types/jest": "npm:^29.5.14"
+    "@types/node": "npm:^22.10.1"
+    "@types/supertest": "npm:^6.0.2"
+    cors: "npm:^2.8.5"
+    dotenv: "npm:^16.4.7"
+    express: "npm:^4.21.2"
+    jest: "npm:^29.7.0"
+    nodemon: "npm:^3.1.7"
+    supertest: "npm:^7.0.0"
+    ts-jest: "npm:^29.2.5"
+    ts-node: "npm:^10.9.2"
+    typescript: "npm:^5.7.2"
+  languageName: unknown
+  linkType: soft
 
 "walker@npm:^1.0.8":
   version: 1.0.8
